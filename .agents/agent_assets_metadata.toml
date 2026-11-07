@@ -1,0 +1,16 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "HA8V71yevRXDqaS05sPFq"
+uri = "file://theme.zip"
+type = "unspecified"
+title = "theme.zip"
+description = "أرشيف ملفات المشروع باستثناء مجلدات .git وnode_modules."
+logical_id = "9b6478fe-9ca0-452c-b1a3-e5a35d3ba263"
+content_hash = "sha256:7dd9ae5d74b799524518894369417e85f64aa24b0a5be195d553b8714da58e68"
+size = 49232271
+mtime_ms = 1794085671670
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:cd9a9d48-2f0e-4947-b350-777e7e8a7b76/9b6478fe-9ca0-452c-b1a3-e5a35d3ba263/5da2a408-292a-4a16-b642-db1093343b89"
+storage_version_token = "1794085697035605"
+content_type = "application/octet-stream"
