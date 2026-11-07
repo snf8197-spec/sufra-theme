@@ -1,0 +1,1 @@
+- [Salla package firewall](salla-package-firewall.md) — a blocked Twilight package can prevent setup; don't bypass Replit's package proxy.
