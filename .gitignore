@@ -27,4 +27,15 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 .DS_Store
 
+# Replit and local workspace data
+/.agents/
+/.cache/
+/.local/
+/.config/
+/.replit
+/.vscode/
+
+# Local-only generated files
+/theme.zip
+/scripts/post-merge.sh
 
