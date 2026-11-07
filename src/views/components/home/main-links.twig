@@ -10,8 +10,8 @@
 | component.links[].url              | string   |                                                                              |
 | position                           | int      | Sorting number start from zero                                               |
 #}
-<section component-id="{{ componentId }}" data-testid="store-home-main-links" class="s-block s-block--categories {{ component.merge_with_top_component and position ?'merge-with-top-component' : '' }} {{ not component.title and component.merge_with_top_component ? 'merged-has-no-title' : '' }}">
-    <div class="container">
+<section component-id="{{ componentId }}" data-testid="store-home-main-links" class="s-block s-block--categories food-home-links {{ component.merge_with_top_component and position ?'merge-with-top-component' : '' }} {{ not component.title and component.merge_with_top_component ? 'merged-has-no-title' : '' }}">
+    <div class="container food-home-links__container">
       <salla-slider  
         type="carousel"
         {% if(component.title) or (component.merge_with_top_component) %}
@@ -23,13 +23,15 @@
           <div slot="items">
               {% if component.show_cats %}
                 {% for cat in component.categories %}
-                    <div class="swiper-slide slide--one-sixth">
-                        <a href="{{ cat.url }}" class="slide--cat-entry">
-                            {% if cat.image %}
-                              <img src="{{ cat.image ? cat.image : 'images/placeholder.png' | asset }}" class="w-16 h-16 object-cover rounded-full mb-2.5 {{ cat.image ? '' : 'has-placeholder'}}" width="64" height="64" alt="{{ menu.title }}"/>
-                            {% else %}
-                              <i class="{{ cat.icon }}"></i>
-                            {% endif %}
+                    <div class="swiper-slide slide--one-sixth food-home-links__slide">
+                        <a href="{{ cat.url }}" class="slide--cat-entry food-home-links__entry">
+                            <span class="food-home-links__visual">
+                                {% if cat.image %}
+                                  <img src="{{ cat.image }}" class="food-home-links__image" width="88" height="88" loading="lazy" alt="{{ cat.name }}"/>
+                                {% else %}
+                                  <i class="{{ cat.icon }} food-home-links__icon" aria-hidden="true"></i>
+                                {% endif %}
+                            </span>
                             <h2>{{ cat.name }}</h2>
                         </a>
                     </div>
@@ -37,9 +39,11 @@
               {% else %}
                 {% for link in component.links %}
                   {% if link.title %}
-                    <div class="swiper-slide slide--one-sixth">
-                        <a href="{{ link.url }}" class="slide--cat-entry">
-                            <i class="{{ link.icon }}"></i>
+                    <div class="swiper-slide slide--one-sixth food-home-links__slide">
+                        <a href="{{ link.url }}" class="slide--cat-entry food-home-links__entry">
+                            <span class="food-home-links__visual">
+                              <i class="{{ link.icon }} food-home-links__icon" aria-hidden="true"></i>
+                            </span>
                             <h2>{{ link.title }}</h2>
                         </a>
                     </div>
@@ -49,4 +53,4 @@
           </div>
       </salla-slider>
     </div>
-</section> 
+</section>
