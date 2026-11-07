@@ -1,7 +1,7 @@
 {
     "name": {
-        "ar": "رائد Twig",
-        "en": "Raed Twig"
+        "ar": "سفرة",
+        "en": "Safra"
     },
     "repository": "https://github.com/SallaApp/theme-raed",
     "author_email": "support@salla.sa",
@@ -1142,7 +1142,7 @@
     ],
     "support_url": "https://salla.com/",
     "description": {
-        "ar": "مجموعة كبيرة من المزايا لدعم تجارتك وتقديم تجربة تسوق مثيرة لعملائك",
-        "en": "A wide range of features to support your business and provide an exciting shopping experience for your customers"
+        "ar": "ثيم سفرة للمطاعم والأسر المنتجة",
+        "en": "Safra theme for restaurants and home-based food businesses"
     }
 }
