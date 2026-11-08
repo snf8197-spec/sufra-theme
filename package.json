@@ -10,6 +10,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "test": "node --test",
+    "test:color-contrast": "node --test test/theme-color-contrast.test.js",
     "production": "webpack --mode production",
     "prod": "webpack --mode production",
     "development": "webpack --mode development",
