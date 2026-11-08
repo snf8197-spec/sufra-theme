@@ -94,3 +94,23 @@
 
 @import 'lite-youtube-embed/src/lite-yt-embed.css';
 @import 'mmenu-light/dist/mmenu-light.css';
+
+/*
+ * Keep keyboard focus visible against both light and dark store colors.
+ * The white halo and dark outline provide contrast without relying on the
+ * merchant's primary color; the thick, offset outline also gives a clear shape.
+ */
+:focus-visible,
+salla-button:focus-within {
+  outline: 3px solid #111827;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px #fff;
+}
+
+@media (forced-colors: active) {
+  :focus-visible,
+  salla-button:focus-within {
+    outline-color: Highlight;
+    box-shadow: none;
+  }
+}

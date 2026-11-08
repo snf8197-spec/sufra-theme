@@ -152,7 +152,7 @@
 
 // Mainnav cart icon
 .header-btn{
-  @apply border-none outline-none transition-opacity hover:opacity-80;
+  @apply border-none transition-opacity hover:opacity-80;
 
   &__icon{
     @apply text-xl w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-700;

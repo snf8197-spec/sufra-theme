@@ -138,9 +138,6 @@ module.exports = {
             },
         },
     },
-    corePlugins: {
-      outline: false,
-    },
     plugins: [
       require('@tailwindcss/forms'),
       require('@tailwindcss/line-clamp'),
