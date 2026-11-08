@@ -36,12 +36,12 @@
 | theme.translations_hash                            | int      | to be used in case merchant updated frontend store translations                                          |
 | theme.color                                        | object   |                                                                                                          |
 | theme.color.primary                                | string   |                                                                                                          |
-| theme.color.text                                   | string   | suitable text color comparing to `theme.primary.color`, #000000, #FFFFFF                                 |
+| theme.color.text                                   | string   | suitable text color comparing to `theme.color.primary`, #000000, #FFFFFF                                |
 | theme.color.reverse_primary                        | string   |                                                                                                          |
 | theme.color.reverse_text                           | string   | if `theme.text_color=#000000` means that `theme.reverse_text_color=#FFFFFF`                              |
-| theme.color.is_dark                                | bool     | Does main store color `theme.primary.color` considered as dim color?                                     |
-| theme.color.darker(float alpha, ?string hexColor)  | string   | get darker color from `theme.primary.color` or from passed color, `alpha` range from 0.0-1.0             |
-| theme.color.lighter(float alpha, ?string hexColor) | string   | get lighter color from `theme.primary.color` or from passed color, `alpha` range from 0.0-1.0            |
+| theme.color.is_dark                                | bool     | Does main store color `theme.color.primary` considered as dim color?                                    |
+| theme.color.darker(float alpha, ?string hexColor)  | string   | get darker color from `theme.color.primary` or from passed color, `alpha` range from 0.0-1.0            |
+| theme.color.lighter(float alpha, ?string hexColor) | string   | get lighter color from `theme.color.primary` or from passed color, `alpha` range from 0.0-1.0           |
 | theme.font                                         | ?object  | Salla predefined font, null when the theme doesn't have `fonts` feature                                  |
 | theme.font.name                                    | string   | DINNextLTArabic-Regular, Amazon-Ember, Apple, Dubai, Estedad                                             |
 | theme.font.url                                     | string   | css full url ex: 'https://my_store.test/dist/fonts/default.css'                                          |
@@ -86,6 +86,7 @@
     <style>
         :root {
             --font-main: '{{theme.font.name}}';
+            /* Merchant-selected brand color and its accessible theme-derived variants. */
             --color-primary: {{ theme.color.primary }};
             --color-primary-dark: {{ theme.color.darker(0.15) }};
             --color-primary-light: {{ theme.color.lighter(0.15) }};
