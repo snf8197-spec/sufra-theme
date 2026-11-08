@@ -38,7 +38,7 @@
                 {% endfor %}
               {% else %}
                 {% for link in component.links %}
-                  {% if link.title %}
+                  {% if link.title and link.url %}
                     <div class="swiper-slide slide--one-sixth food-home-links__slide">
                         <a href="{{ link.url }}" class="slide--cat-entry food-home-links__entry">
                             <span class="food-home-links__visual">

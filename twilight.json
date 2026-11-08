@@ -606,7 +606,7 @@
                             "id": "links.url",
                             "value": null,
                             "description": null,
-                            "required": false,
+                            "required": true,
                             "format": "variable-list",
                             "searchable": true,
                             "source": "custom",
