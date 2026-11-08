@@ -3,8 +3,9 @@
         "ar": "سفرة",
         "en": "Sufra"
     },
-    "repository": "https://github.com/SallaApp/theme-raed",
-    "author_email": "support@salla.sa",
+    "repository": "https://github.com/snf8197-spec/sufra-theme",
+    "author_email": "snf8197@gmail.com",
+    "version": "1.0.0",
     "features": [
         "mega-menu",
         "fonts",
@@ -1245,9 +1246,9 @@
             ]
         }
     ],
-    "support_url": "https://salla.com/",
+    "support_url": "https://wa.me/966531933963",
     "description": {
-        "ar": "ثيم سفرة للمطاعم والأسر المنتجة",
+        "ar": "ثيم للمطاعم والأسر المنتجة",
         "en": "Safra theme for restaurants and home-based food businesses"
     }
 }
