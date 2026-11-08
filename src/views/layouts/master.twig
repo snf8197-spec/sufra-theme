@@ -90,9 +90,27 @@
             --color-primary: {{ theme.color.primary }};
             --color-primary-dark: {{ theme.color.darker(0.15) }};
             --color-primary-light: {{ theme.color.lighter(0.15) }};
-            --color-primary-reverse: {{ theme.color.reverse_text }};
+            /* A readable brand tint for text on light surfaces, independent of the button fill. */
+            --color-primary-text: {{ theme.color.darker(0.62) }};
+            /* Twilight's `text` is the foreground that contrasts with `primary`. */
+            --color-primary-reverse: {{ theme.color.text }};
+            --color-text: #6b625a;
             /* Theme specific variables */
             --s-radius: .75rem;
+        }
+
+        /* Keep brand-colored links legible even before the generated stylesheet is rebuilt. */
+        .text-primary,
+        .text-primary-dark,
+        .text-primary-d,
+        [class~="hover:text-primary"]:hover,
+        [class~="hover:text-primary-dark"]:hover,
+        [class~="hover:text-primary-d"]:hover {
+            color: var(--color-primary-text);
+        }
+
+        [class~="!text-primary"] {
+            color: var(--color-primary-text) !important;
         }
     </style>
     {# tracking services, custom css feature. #}

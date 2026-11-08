@@ -11,9 +11,10 @@ $main-text-color: var(--main-text-color);
 
   /*
    * Store brand colors (primary, shades, and contrast text) come from
-   * theme.color in master.twig. These are local supporting neutrals.
+   * theme.color in master.twig. Keep supporting text dark enough to remain
+   * readable on the warm neutral surfaces used throughout this theme.
    */
-  --color-text: #766b60;
+  --color-text: #6b625a;
   --bg-gray: #2b21180d;
   --color-grey: #faf7f2;
   --color-light-grey: #eee7dc;

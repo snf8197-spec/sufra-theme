@@ -38,6 +38,11 @@ module.exports = {
                 'primary-reverse' : 'var(--color-primary-reverse)',
                 'primary-dark' : 'var(--color-primary-dark)'
             },
+            textColor: {
+                'primary': 'var(--color-primary-text)',
+                'primary-d': 'var(--color-primary-text)',
+                'primary-dark': 'var(--color-primary-text)'
+            },
             spacing: {
               '3.75': '15px',
               '7.5' : '30px',
