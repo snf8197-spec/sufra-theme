@@ -317,15 +317,27 @@
                     "item_label": "صورة",
                     "value": [
                         {
-                            "slides.image": "https://cdn.salla.sa/ZrBEO/MopzhoqpTkDObcKc8Q8n77AuydanfsGXdZO7iinH.jpg",
-                            "slides.title": "روِّج لمنتجاتك كصور متحركة",
-                            "slides.description": "اعرض المنتجات التي تود إبرازها لزوّار متجرك في هذه المساحة",
+                            "slides.image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1600&h=900&q=80",
+                            "slides.title": {
+                                "ar": "وجبات طازجة بطعم البيت",
+                                "en": "Fresh meals, made with care"
+                            },
+                            "slides.description": {
+                                "ar": "اكتشف أطباقاً يومية محضّرة بمكونات طازجة لتشاركها مع من تحب.",
+                                "en": "Explore daily dishes made with fresh ingredients, ready to share."
+                            },
                             "slides.without_overlay": false
                         },
                         {
-                            "slides.image": "https://cdn.salla.sa/ZrBEO/3gOhYSaIhaHxhH2IHWxJYDl9JHwxP6dGKiZFSq4K.jpg",
-                            "slides.title": "شجّع زوار متجرك على الشراء عبر عروض خاصة",
-                            "slides.description": "اعرض المنتجات التي تود إبرازها لزوّار متجرك في هذه المساحة",
+                            "slides.image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1600&h=900&q=80",
+                            "slides.title": {
+                                "ar": "حلويات ومخبوزات لكل مناسبة",
+                                "en": "Sweets and bakes for every occasion"
+                            },
+                            "slides.description": {
+                                "ar": "اختر من تشكيلتنا المنزلية لتكتمل جمعتك أو مناسبتك.",
+                                "en": "Choose from our homemade selection for your next gathering or celebration."
+                            },
                             "slides.without_overlay": false
                         }
                     ],
@@ -507,37 +519,58 @@
                     "value": [
                         {
                             "links.icon": "sicon-packed-box",
-                            "links.title": "منتج جاهز",
-                            "links.url__type": "offers_link"
-                        },
-                        {
-                            "links.icon": "sicon-fabric-swatch",
-                            "links.title": "خدمة حسب الطلب",
-                            "links.url__type": "offers_link"
-                        },
-                        {
-                            "links.icon": "sicon-cake",
-                            "links.title": "أكل ومشروبات",
-                            "links.url__type": "offers_link"
-                        },
-                        {
-                            "links.icon": "sicon-game-controller-alt",
-                            "links.title": "منتج رقمي",
-                            "links.url__type": "offers_link"
-                        },
-                        {
-                            "links.icon": "sicon-barcode-scan",
-                            "links.title": "بطاقة رقمية",
-                            "links.url__type": "offers_link"
+                            "links.title": {
+                                "ar": "أطباق اليوم",
+                                "en": "Today's dishes"
+                            },
+                            "links.url__type": "categories"
                         },
                         {
                             "links.icon": "sicon-inbox-full",
-                            "links.title": "مجموعة منتجات",
-                            "links.url__type": "offers_link"
+                            "links.title": {
+                                "ar": "الوجبات الرئيسية",
+                                "en": "Main meals"
+                            },
+                            "links.url__type": "categories"
+                        },
+                        {
+                            "links.icon": "sicon-cake",
+                            "links.title": {
+                                "ar": "حلويات منزلية",
+                                "en": "Homemade desserts"
+                            },
+                            "links.url__type": "categories"
+                        },
+                        {
+                            "links.icon": "sicon-cake",
+                            "links.title": {
+                                "ar": "مخبوزات طازجة",
+                                "en": "Freshly baked"
+                            },
+                            "links.url__type": "categories"
+                        },
+                        {
+                            "links.icon": "sicon-store2",
+                            "links.title": {
+                                "ar": "مقبلات ومشاركات",
+                                "en": "Starters and sharing"
+                            },
+                            "links.url__type": "categories"
+                        },
+                        {
+                            "links.icon": "sicon-store2",
+                            "links.title": {
+                                "ar": "مشروبات",
+                                "en": "Drinks"
+                            },
+                            "links.url__type": "categories"
                         },
                         {
                             "links.icon": "sicon-calendar-date",
-                            "links.title": "حجوزات",
+                            "links.title": {
+                                "ar": "عروض اليوم",
+                                "en": "Today's offers"
+                            },
                             "links.url__type": "offers_link"
                         }
                     ],
