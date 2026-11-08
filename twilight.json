@@ -680,6 +680,78 @@
             ]
         },
         {
+            "key": "77d93a8d-3e18-4ff8-8c12-2c90b8a127b4",
+            "title": {
+                "en": "Occasion and family meals",
+                "ar": "طلبات المناسبات والوجبات العائلية"
+            },
+            "icon": "sicon-cake",
+            "path": "home.event-family-orders",
+            "fields": [
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "عنوان القسم",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": {
+                        "ar": "طلبات المناسبات والوجبات العائلية",
+                        "en": "Occasion and family meals"
+                    },
+                    "required": false,
+                    "format": "text",
+                    "placeholder": "أدخل عنوان القسم...",
+                    "minLength": 0,
+                    "maxLength": 100
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "وصف القسم",
+                    "multilanguage": true,
+                    "id": "description",
+                    "value": {
+                        "ar": "اكتشف صواني الضيافة والوجبات المناسبة للمناسبات والجمعات العائلية.",
+                        "en": "Explore catering trays and meals for celebrations and family gatherings."
+                    },
+                    "required": false,
+                    "format": "textarea",
+                    "placeholder": "أضف وصفاً مختصراً للقسم...",
+                    "minLength": 0,
+                    "maxLength": 255
+                },
+                {
+                    "type": "items",
+                    "icon": "sicon-keyboard_arrow_down",
+                    "label": "تصنيفات المناسبات والوجبات العائلية",
+                    "id": "categories",
+                    "format": "dropdown-list",
+                    "selected": [],
+                    "options": [],
+                    "source": "categories",
+                    "multichoice": true,
+                    "searchable": true,
+                    "required": false,
+                    "maxLength": 12
+                },
+                {
+                    "type": "items",
+                    "icon": "sicon-keyboard_arrow_down",
+                    "label": "منتجات المناسبات والوجبات العائلية",
+                    "id": "products",
+                    "format": "dropdown-list",
+                    "selected": [],
+                    "options": [],
+                    "source": "products",
+                    "multichoice": true,
+                    "searchable": true,
+                    "required": false,
+                    "minLength": 0,
+                    "maxLength": 8
+                }
+            ]
+        },
+        {
             "key": "9a758d20-2ce4-4782-91fe-c04466464588",
             "title": {
                 "en": "Animated products with a background",

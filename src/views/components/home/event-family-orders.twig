@@ -1,0 +1,53 @@
+{#
+| Variable                | Type       | Description                                      |
+|-------------------------|------------|--------------------------------------------------|
+| component.title         | ?string    | Editable section title                           |
+| component.description   | ?string    | Editable section description                     |
+| component.categories    | Category[] | Categories selected by the merchant              |
+| component.products      | Product[]  | Products selected by the merchant               |
+#}
+{% if component.categories|length or component.products|length %}
+<section component-id="{{ componentId }}" data-testid="store-home-event-family-orders" class="s-block food-home-event-orders">
+    <div class="container food-home-links">
+        {% if component.title or component.description %}
+            <div class="s-block__title">
+                <div class="right-side">
+                    {% if component.title %}
+                        <h2>{{ component.title }}</h2>
+                    {% endif %}
+                    {% if component.description %}
+                        <p>{{ component.description }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        {% endif %}
+
+        {% if component.categories|length %}
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-6">
+                {% for category in component.categories %}
+                    {% if category.url and category.name %}
+                        <a href="{{ category.url }}" class="food-home-links__entry flex flex-col">
+                            <span class="food-home-links__visual">
+                                {% if category.image %}
+                                    <img src="{{ category.image }}" class="food-home-links__image" width="88" height="88" loading="lazy" alt="{{ category.name }}"/>
+                                {% else %}
+                                    <i class="{{ category.icon|default('sicon-cake') }} food-home-links__icon" aria-hidden="true"></i>
+                                {% endif %}
+                            </span>
+                            <h2>{{ category.name }}</h2>
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% if component.products|length %}
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                {% for product in component.products %}
+                    <custom-salla-product-card product="{{ product }}"></custom-salla-product-card>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endif %}
