@@ -131,11 +131,11 @@
                         <i class="sicon-heart"></i>
                     </salla-button>
 
-                    {# Calories Badge #}
-                    {% if product.calories %}
-                        <div class="absolute z-[2] top-4 rtl:left-4 ltr:right-4 bg-white shadow-sm flex flex-col justify-center items-center rounded-full w-20 h-20 md:w-24 md:h-24">
-                            <span class="text-red-500 text-xl leading-none font-bold">{{ product.calories }}</span>
-                            <span class="text-xs text-gray-500">{{ trans('pages.products.calories') }}</span>
+                    {# Food calories: show only the merchant-provided value. #}
+                    {% if product.type == 'food' and product.calories is not null %}
+                        <div class="absolute z-[2] top-4 rtl:left-4 ltr:right-4 flex flex-col justify-center items-center rounded-2xl w-[5.25rem] h-[5.25rem] md:w-24 md:h-24 bg-white text-gray-800 border border-gray-200 shadow-sm">
+                            <span class="text-red-500 text-xl md:text-2xl leading-none font-bold">{{ product.calories }}</span>
+                            <span class="mt-1 text-[0.65rem] md:text-xs text-gray-500">{{ trans('pages.products.calories') }}</span>
                         </div>
                     {% endif %}
 
@@ -242,7 +242,7 @@
                   </div>
                 </div>
 
-                <div data-testid="store-product-description" class="product__description p-2 px-5 sm:p-1 leading-7 mb-3">
+                <div data-testid="store-product-description" class="product__description {% if product.type == 'food' %}mb-4 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 sm:px-5 sm:py-4{% else %}p-2 px-5 sm:p-1 mb-3{% endif %} leading-7">
                     {% set product_desc = product.description|replace({"&nbsp;":"\n"}) %}
                     {% if product.has_read_more %}
                         <article class="article article--main relative leading-8 overflow-hidden transition-all max-h-0 duration-300 py-4"
